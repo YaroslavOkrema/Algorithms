@@ -8,4 +8,4 @@ function doubleArray(array) {
     }
     return newArray;
 }
-console.log(map([2, 2, 2]));
+console.log(doubleArray([2, 2, 2]));
