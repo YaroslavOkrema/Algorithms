@@ -32,4 +32,4 @@ function countSheeps(sheep) {
     }
     return res;
 }
-console.log(countSheeps(sheep)); // 17
+console.log(countSheeps(sheep)); // 17 
