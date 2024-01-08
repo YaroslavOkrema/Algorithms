@@ -5,7 +5,7 @@
 
 Примеры(Оператор, значение1, значение2) --> вывод */
 
-function basicOp(operation, value1, value2)
+function basicOp(value1, operation, value2)
 {
    switch (operation) {
     case '+':
@@ -18,4 +18,4 @@ function basicOp(operation, value1, value2)
       return value1 / value2;
   }
 }
-console.log(basicOp('*', 10, 10)); //100
+console.log(basicOp(10, '*', 10)); //100
