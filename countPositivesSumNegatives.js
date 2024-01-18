@@ -8,6 +8,8 @@
 Для входных данных [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15] следует вернуть [10, -65]. */
 
 function countPositivesSumNegatives(arr) {
+    if(arr === null || !arr.length ) return [];
+    
     let count = 0;
     let sum = 0;
     
@@ -21,4 +23,4 @@ function countPositivesSumNegatives(arr) {
     }
     return [count, sum];
 }
-console.log(countPositivesSumNegatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]));
+console.log(countPositivesSumNegatives([]));
