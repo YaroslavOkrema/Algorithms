@@ -3,10 +3,6 @@
 
 function typeValidation(variable, type) {
     let value = typeof(variable);
-    if(value === type) {
-      return true;
-    } else {
-      return false;
-    }
+    return value === type;
 }
 console.log(typeValidation(42, "number")); // true
