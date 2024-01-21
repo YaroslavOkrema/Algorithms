@@ -2,7 +2,6 @@
 // "42", "number" --> false
 
 function typeValidation(variable, type) {
-    let value = typeof(variable);
-    return value === type;
+    return typeof(variable) === type;
 }
-console.log(typeValidation(42, "number")); // true
+console.log(typeValidation("42", "number")); // true
