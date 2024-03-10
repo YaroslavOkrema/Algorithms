@@ -189,7 +189,7 @@ const lexus = new HybridCar('Lexus', 'RX')
 const nissan = new Car('Nissan')
 console.log(lexus.autoPark());*/
 
-class Clock {
+/*class Clock {
     constructor( { template } ) {
         this.template = template;
     }
@@ -225,4 +225,47 @@ class Clock {
 }
 
 const clock = new Clock({template: 'h:m:s'});
-clock.start();
+clock.start()*/;
+
+class User {
+    constructor(name) {
+        this.name = name;
+    }
+
+    sayHello() {
+        console.log('Hello ' + this.name);
+    }
+}
+
+const user = new User('Ivan');
+user.sayHello();
+
+class Car {
+    constructor(brand, color) {
+        this.brand = brand;
+        this.color = color;
+    }
+
+    infoColor() {
+        console.log('Color: ' + this.color);
+    }
+
+    infoBrand() {
+        console.log('Brand: ' + this.brand);
+    }
+}
+
+class Audi extends Car {
+    constructor(brand, color, model) {
+        super(brand, color);
+        this.model = model
+    }
+
+    isAutoParking() {
+        console.log('Yes');
+    }
+}
+
+const audi = new Audi('Audi', 'Red', 'Rs7');
+const bmw = new Car('BMW', 'Black');
+audi.isAutoParking();
