@@ -59,6 +59,7 @@
 
 // console.log(cat.voice);
 
+/*
 class Component {
     constructor(selector) {
         this.$el = document.querySelector(selector);
@@ -106,4 +107,84 @@ const c = new Circle({
     selector: '#circle',
     size: 90,
     color: 'green'
-})
+})*/
+
+/*
+function Car(brand, color) {
+    this.brand = brand;
+    this.color = color;
+}
+
+Car.prototype.start = function () {
+    console.log(`${this.brand} - start!`);
+}
+
+const tesla = new Car('Tesla', 'silver');
+const nissan = new Car('Nissan', 'red');
+console.log(tesla);*/
+
+/*
+class Car {
+    constructor(brand, color) {
+        this.brand = brand;
+        this.color = color;
+    }
+    start() {
+        console.log(`${this.brand} - start!`);
+    }
+    stop() {
+        console.log(`${this.brand} - STOP!`);
+    }
+
+    static discount() {
+        console.log('discount - 10%');
+    }
+
+    set rating(value) {
+        this.score = value.toUpperCase();
+    }
+
+    get rating() {
+        return this.score;
+    }
+}
+
+const tesla = new Car('Tesla', 'silver');
+const nissan = new Car('Nissan', 'red');
+console.log();*/
+
+class Car {
+    constructor(brand) {
+        this.brand = brand;
+        this.gasTank = 100;
+        this.zapravka = [];
+    }
+
+    getGas() {
+        this.gasTank += 10;
+        const stamp = Date.now();
+        const time = new Date(stamp);
+        this.zapravka.push(time.toString());
+        return this.gasTank;
+    }
+
+    drive() {
+        this.gasTank -= 10;
+        return this.gasTank;
+    }
+}
+
+class HybridCar extends Car {
+    constructor(brand, model) {
+        super(brand);
+        this.model = model;
+    }
+
+    autoPark() {
+        console.log('Auto parking');
+    }
+}
+
+const lexus = new HybridCar('Lexus', 'RX')
+const nissan = new Car('Nissan')
+console.log(lexus.autoPark());
