@@ -6,9 +6,21 @@ function fetchUserInfo(callback) {
     }, 1000);
 }
 
+function fetchUserGames(id, callback) {
+    setTimeout(() => {
+        // fetch(id)
+        const data = ['game1', 'game2'];
+        callback(data);
+    }, 1000);
+}
+
 function run() {
     fetchUserInfo((userInfo) => {
         console.log(userInfo);
+
+        fetchUserGames(userInfo.id, (userGames) => {
+            console.log(userGames);
+        });
     });
 }
 
