@@ -26,28 +26,35 @@ function run() {
 
 run();*/
 
-function run() {
-    console.log('test');
-    const data = new Promise((resolve, reject) => {
-        console.log('test4');
+function fetchUserData() {
+    return new Promise((resolve, reject) => {
         setTimeout(() => {
             //fetch
             const data = { id: 1, name: 'Alex'};
 
-            console.log('test');
             resolve(data);
-            console.log('test6');
         }, 1000);
     });
+}
 
-    console.log('test2');
+function fetchUserGames(id) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            //fetch
+            const data = ['game1', 'game2'];
+            resolve(data);
+        })
+    })
+}
 
-    data.then((userData) => {
-        console.log(userData);
-        console.log('test7');
-    });
-
-    console.log('test3');
+function run() {
+    fetchUserData()
+        .then((userData) => {
+            return fetchUserGames(userData.id);
+        })
+        .then((userGames) => {
+            console.log(userGames);
+        });
 }
 
 run();
