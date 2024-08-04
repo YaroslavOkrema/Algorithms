@@ -3,7 +3,7 @@
 }
 getThis();*/
 
-function getPrice(currency = '$') {
+/*function getPrice(currency = '$') {
     console.log(currency + this.price);
     return this;
 }
@@ -24,11 +24,12 @@ const prod1 = {
             console.log(this)
         }
     }
-}
+}*/
 /*prod1.getPrice();
 prod1.info.getInfo();
 prod1.getName();*/
 
+/*
 const prod2 = {
     name: 'AMD',
     price: 50,
@@ -52,9 +53,41 @@ const prod3 = {
 getPrice.call(prod3, "*");
 
 getPrice.apply(prod3, ['*']);
-/*
-prod3.getName().getPrice();*/
+/!*
+prod3.getName().getPrice();*!/
 
 const getPriceBind = prod3.getPrice.bind(prod3, '*');
 console.log(getPriceBind);
-setTimeout(getPriceBind, 1000);
+setTimeout(getPriceBind, 1000);*/
+
+/*
+function calcDiscount(age) {
+    if (age > 65) {
+        console.log(this.price / 2)
+    } else {
+        console.log(this.price)
+    }
+}
+const item = {title: 'phone', price: 1000}
+const calcDiscounts = calcDiscount.bind(item, [70]);
+calcDiscounts();*/
+
+/*
+function createItem(title, price) {
+    this.title = title;
+    this.price = price;
+    console.log(this)
+}
+new createItem('phone', '1000');*/
+
+const obj = {
+    getThis1: function () {
+        console.log(this);
+    },
+    getThis2: () => {
+        console.log(this);
+    },
+}
+
+obj.getThis1();
+obj.getThis2();
