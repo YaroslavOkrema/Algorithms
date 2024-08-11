@@ -170,6 +170,19 @@ class Employer extends Person {
     }
 }
 
+/*class Developer extends Employer {
+    private level;
+
+    constructor(firstName, lastName, age, inn, number, snils, level) {
+        super(firstName, lastName, age, inn, number, snils);
+        this.level = level;
+    }
+
+    public greeting() {
+        console.log(`Hello I'm person my name is ${this.firstName}`)
+    }
+}*/
+
 class Developer extends Employer {
     private level;
 
