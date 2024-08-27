@@ -36,7 +36,7 @@ const o10: User2 = { name: 'Alex', age: 20, car: { color: 'red' } };
 const o11: string[] = ['123', '324', '432'];
 const o12: Array<string> = ['123', '324', '432'];*/
 
-type o13_Config = {
+/*type o13_Config = {
   status: string;
 };
 
@@ -97,4 +97,70 @@ if (typeof age === 'string') {
 }
 else if (typeof age === 'number') {
     age.toFixed(2);
+}*/
+
+type O15_car = {
+    color: string;
+    speed: number;
+    left: boolean;
+};
+
+type O16_User = {
+    name: string;
+    age: number;
+};
+
+type O16_User2 = O15_car & O16_User;
+
+function renderUser(user: O16_User) {}
+function renderCar(car: O15_car) {}
+function renderUserCar(userAndCar: O16_User2) {}
+
+// literals
+
+function o18(status: 'ok' | 'error') {
+    if (status === 'ok') {
+
+    }
+    else if (status === 'error') {
+
+    }
 }
+o18('ok');
+
+// enum
+/*const user = {
+    name: 'Alex',
+    age: 20,
+}*/
+
+const enum Status {
+    NOT_FOUND = 404,
+    SUCCESS = 200,
+    ERROR = 500,
+}
+
+const enum ErrorInfo {
+    empty = "Вы не заполнили поле",
+    unknown_symbols = 'dasdasdasda',
+    min_length = 'dasdaf223123'
+}
+
+const enum user2 {
+    name = 'Alex',
+    age = 20,
+}
+
+// utility types
+
+type UserO19 =  Partial<{
+    name: string;
+    age: number;
+    car: boolean;
+}>;
+
+type UserO20 = Required<{
+    name?: string;
+    age?: number;
+    car?: boolean;
+}>;
