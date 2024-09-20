@@ -99,7 +99,7 @@ else if (typeof age === 'number') {
     age.toFixed(2);
 }*/
 
-type O15_car = {
+/*type O15_car = {
     color: string;
     speed: number;
     left: boolean;
@@ -129,10 +129,10 @@ function o18(status: 'ok' | 'error') {
 o18('ok');
 
 // enum
-/*const user = {
+/!*const user = {
     name: 'Alex',
     age: 20,
-}*/
+}*!/
 
 const enum Status {
     NOT_FOUND = 404,
@@ -163,4 +163,4 @@ type UserO20 = Required<{
     name?: string;
     age?: number;
     car?: boolean;
-}>;
+}>;*/
