@@ -1,4 +1,4 @@
-/*// number, string, boolean, null, undefined, any
+// number, string, boolean, null, undefined, any
 
 const o1: number = 20; // NaN Infinity
 const o2: string = 'Hello';
@@ -34,9 +34,9 @@ interface  User2 {
 const o10: User2 = { name: 'Alex', age: 20, car: { color: 'red' } };
 
 const o11: string[] = ['123', '324', '432'];
-const o12: Array<string> = ['123', '324', '432'];*/
+const o12: Array<string> = ['123', '324', '432'];
 
-/*type o13_Config = {
+type o13_Config = {
   status: string;
 };
 
@@ -97,9 +97,9 @@ if (typeof age === 'string') {
 }
 else if (typeof age === 'number') {
     age.toFixed(2);
-}*/
+}
 
-/*type O15_car = {
+type O15_car = {
     color: string;
     speed: number;
     left: boolean;
@@ -129,10 +129,10 @@ function o18(status: 'ok' | 'error') {
 o18('ok');
 
 // enum
-/!*const user = {
+/*const user = {
     name: 'Alex',
     age: 20,
-}*!/
+}*/
 
 const enum Status {
     NOT_FOUND = 404,
@@ -163,4 +163,4 @@ type UserO20 = Required<{
     name?: string;
     age?: number;
     car?: boolean;
-}>;*/
+}>;
