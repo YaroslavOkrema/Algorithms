@@ -142,3 +142,83 @@ function maps2(arr){
 }
 
 console.log(maps2([1, 2, 3]));
+
+// Напишіть функцію для розділення рядка і перетворення його в масив слів.
+//"Robin Singh" ==> ["Robin", "Singh"]
+//"I love arrays they are my favorite" ==> ["I", "love", "arrays", "they", "are", "my", "favorite"]
+
+function stringToArray(string){
+    return string.split(' ');
+}
+
+console.log(stringToArray("I love arrays they are my favorite"));
+
+//Допишіть функцію квадратної суми так, щоб вона підносила до квадрату кожне передане їй число, а потім підсумовувала результати.
+function squareSum(arr){
+    let square = arr.map(function(numbers){
+        return numbers * numbers;
+    });
+
+    return square.reduce(function(accum, value) {
+        return accum + value;
+    });
+}
+
+console.log(squareSum([0, 3, 4, 5])); // 50
+
+//Напишіть функцію, яка отримує два аргументи і повертає всі числа, які діляться на заданий дільник.
+// Перший аргумент - масив чисел, другий - дільник.
+// [1, 2, 3, 4, 5, 6], 2 --> [2, 4, 6]
+function divisibleBy(arr, divisor){
+    return arr.filter(function (value) {
+        if (value % divisor === 0) {
+            return arr;
+        }
+    })
+}
+
+console.log(divisibleBy([1, 2, 3, 4, 5, 6], 2));
+
+function divisibleBy2(arr, divisor){
+   const newArr = [];
+
+   for (let i = 0; i < arr.length; i++) {
+       if (arr[i] % divisor === 0) {
+           newArr.push(arr[i]);
+       }
+   }
+
+   return newArr;
+}
+
+console.log(divisibleBy2([1, 2, 3, 4, 5, 6], 2));
+
+// You need to get the sum of two arrays... Or rather, the sum of all their elements.
+//
+// P.S. Each array contains only integers. The input data are also numbers.
+
+function arrayPlusArray(arr1, arr2) {
+    let sumArr1 = arr1.reduce(function(accum, value) {
+        return accum + value;
+    });
+
+    let sumArr2 = arr2.reduce(function(accum, value) {
+        return accum + value;
+    });
+
+    return sumArr1 + sumArr2;
+}
+
+console.log(arrayPlusArray([1, 2, 3], [4, 5, 6])); // 21
+
+function sumArrays(arr1, arr2) {
+    const arr3 = [];
+
+    for (let i = 0; i < arr1.length; i++) {
+        arr3.push(arr1[i] + arr2[i]);
+    }
+
+    return arr3;
+}
+
+console.log(sumArrays([1, 2, 3], [4, 5, 6])); // [5, 7, 9]
