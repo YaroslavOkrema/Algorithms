@@ -211,6 +211,8 @@ function arrayPlusArray(arr1, arr2) {
 
 console.log(arrayPlusArray([1, 2, 3], [4, 5, 6])); // 21
 
+// Напишіть функцію sumArrays, яка приймає два масиви однакової довжини та повертає новий масив,
+// в якому кожен елемент є сумою відповідних елементів обох вхідних масивів.
 function sumArrays(arr1, arr2) {
     const arr3 = [];
 
