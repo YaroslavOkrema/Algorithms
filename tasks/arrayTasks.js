@@ -224,3 +224,17 @@ function sumArrays(arr1, arr2) {
 }
 
 console.log(sumArrays([1, 2, 3], [4, 5, 6])); // [5, 7, 9]
+
+//Напишіть функцію, яка видаляє дублікати з масиву невід'ємних чисел і повертає його як результат.
+//
+// Порядок послідовності повинен залишатись незмінним.
+// Input -> Output
+// [1, 1, 2] -> [1, 2]
+// [1, 2, 1, 1, 3, 2] -> [1, 2, 3]
+
+function distinct(arr) {
+    const newArr = [...new Set(arr)];
+    return newArr;
+}
+
+console.log(distinct([1, 2, 1, 1, 3, 2]));
