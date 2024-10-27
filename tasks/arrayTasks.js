@@ -311,6 +311,36 @@ function count(number) {
 
     return arr;
 }
+console.log(count(5));
 
+function invert(arr) {
+    let invertArr = [];
 
+    for (let i = 0; i < arr.length; i++) {
+        invertArr.push(-arr[i]);
+    }
+
+    return invertArr;
+}
+
+console.log(invert([1, -2, 3, -4, 5]));
+
+function invert2(arr) {
+    return arr.map(function (value) {
+        return value * -1;
+    });
+}
+
+console.log(invert2([1, -2, 3, -4, 5]));
+
+// 10 --> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+function count(number) {
+    const arr = [];
+
+    for (let i = 1; i <= number; i++) {
+        arr.push(i);
+    }
+
+    return arr;
+}
 console.log(count(5));
