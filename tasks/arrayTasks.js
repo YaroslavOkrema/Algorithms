@@ -277,3 +277,16 @@ function count(number) {
 
 console.log(count(5));
 
+function fillArr(arr) {
+    const newArr = [];
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i]) {
+            newArr.push(arr[i]);
+        }
+    }
+
+    return newArr;
+}
+
+console.log(fillArr([0, 1, false, 2, undefined, '', 3, null]));
