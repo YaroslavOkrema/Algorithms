@@ -290,3 +290,23 @@ function fillArr(arr) {
 }
 
 console.log(fillArr([0, 1, false, 2, undefined, '', 3, null]));
+
+// -----------------------------------------------------------------------
+//input [1, 2, 3, 4, 5], [6, 7, 8, 9, 10]
+//output [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+function sumArr(arr1, arr2) {
+    let newArr = [];
+
+    for (let i = 0; i < arr1.length; i++) {
+        newArr.push(arr1[i]);
+    }
+
+    for (let i = 0; i < arr2.length; i++) {
+        newArr.push(arr2[i]);
+    }
+
+    return newArr;
+}
+
+console.log(sumArr([1, 2, 3, 4, 5], [6, 7, 8, 9 , 10]));
