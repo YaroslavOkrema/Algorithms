@@ -309,4 +309,55 @@ function sumArr(arr1, arr2) {
     return newArr;
 }
 
+function sumArr2(arr1, arr2) {
+    return [...arr1, ...arr2];
+}
+
 console.log(sumArr([1, 2, 3, 4, 5], [6, 7, 8, 9 , 10]));
+console.log(sumArr2([1, 2, 3, 4, 5], [6, 7, 8, 9 , 10]));
+
+//-----------------------------------------------------------------------------------------
+// Zero to end arr
+function zeroToEnd(arr) {
+    let zeroArr = [];
+    let numbersArr = [];
+    let resultArr = [];
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === 0) {
+            zeroArr.push(arr[i]);
+        } else {
+            numbersArr.push(arr[i]);
+        }
+    }
+
+    for (let i = 0; i < numbersArr.length; i++) {
+        resultArr.push(numbersArr[i]);
+    }
+
+    for (let i = 0; i < zeroArr.length; i++) {
+        resultArr.push(zeroArr[i]);
+    }
+
+    return resultArr;
+}
+
+function zeroToEnd2(arr) {
+    let zeroArr = [];
+    let numbersArr = [];
+
+    arr.forEach((element) => {
+        if (element === 0) {
+            zeroArr.push(element);
+        } else {
+            numbersArr.push(element);
+        }
+    });
+
+    return [...numbersArr, ...zeroArr];
+}
+
+console.log(zeroToEnd([1, 0, 2, 0, 4, 0, 0, 0, 0, 10, 3, 0]));
+console.log(zeroToEnd2([1, 0, 2, 0, 4, 0, 0, 0, 0, 10, 3, 0]));
+
+// ------------------------------------------------------------------
