@@ -357,6 +357,21 @@ function zeroToEnd2(arr) {
     return [...numbersArr, ...zeroArr];
 }
 
+function zeroToEnd2(arr) {
+    let zeroArr = [];
+    let numbersArr = [];
+
+    arr.forEach((element) => {
+        if (element === 0) {
+            zeroArr.push(element);
+        } else {
+            numbersArr.push(element);
+        }
+    });
+
+    return [...numbersArr, ...zeroArr];
+}
+
 console.log(zeroToEnd([1, 0, 2, 0, 4, 0, 0, 0, 0, 10, 3, 0]));
 console.log(zeroToEnd2([1, 0, 2, 0, 4, 0, 0, 0, 0, 10, 3, 0]));
 
