@@ -374,5 +374,4 @@ function longestWord(str) {
 
     return longestWord;
 }
-
 console.log(longestWord('The quick brown fox jumps over the lazy dog'));
