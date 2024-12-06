@@ -360,7 +360,24 @@ function zeroToEnd2(arr) {
 console.log(zeroToEnd([1, 0, 2, 0, 4, 0, 0, 0, 0, 10, 3, 0]));
 console.log(zeroToEnd2([1, 0, 2, 0, 4, 0, 0, 0, 0, 10, 3, 0]));
 
+
 // ------------------------------------------------------------------
+// Напишіть функцію, яка приймає рядок і повертає найдовше слово.
+function longestWord(str) {
+    const words = str.split(' ');
+    let longestWord = '';
+
+    for (let i = 0; i < words.length; i++) {
+        if (words[i].length > longestWord.length) {
+            longestWord = words[i];
+        }
+    }
+
+    return longestWord;
+}
+
+console.log(longestWord('The quick brown fox jumps over the lazy dog'));
+
 // Напишіть функцію, яка приймає рядок і повертає найдовше слово.
 function longestWord(str) {
     const words = str.split(' ');
