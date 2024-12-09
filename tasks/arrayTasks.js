@@ -377,19 +377,3 @@ function longestWord(str) {
 }
 
 console.log(longestWord('The quick brown fox jumps over the lazy dog'));
-
-// Напишіть функцію, яка приймає рядок і повертає найдовше слово.
-function longestWord(str) {
-    const words = str.split(' ');
-    let longestWord = '';
-
-    for (let i = 0; i < words.length; i++) {
-        if (words[i].length > longestWord.length) {
-            longestWord = words[i];
-        }
-    }
-
-    return longestWord;
-}
-
-console.log(longestWord('The quick brown fox jumps over the lazy dog'));
