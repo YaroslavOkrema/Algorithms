@@ -377,3 +377,18 @@ function longestWord(str) {
 }
 
 console.log(longestWord('The quick brown fox jumps over the lazy dog'));
+
+function shortWordInRow(str) {
+    const words = str.split(' ');
+    let shortWord = words[0];
+
+    for (let i = 0; i < words.length; i++) {
+        if (shortWord.length > words[i].length) {
+            shortWord = words[i];
+        }
+    }
+
+    return shortWord;
+}
+
+console.log(shortWordInRow('The quick brown fox jumps over the lazy as dog'));
