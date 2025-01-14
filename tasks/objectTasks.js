@@ -99,4 +99,55 @@ const products = [
 ];
 
 const laptop = products.find(product => product.name === 'Laptop');
-console.log(laptop);
+// console.log(laptop);
+
+//10. Напиши функцію calculateTotal, яка приймає об'єкт кошика із товарами та їх цінами, і повертає загальну вартість.
+
+const cart = {
+    apple: 30,
+    banana: 20,
+    orange: 40
+};
+
+function calculateTotalPrice(cart) {
+    const values = Object.values(cart);
+
+    return values.reduce(function(accum, value) {
+        return accum + value;
+    })
+}
+
+// console.log(calculateTotalPrice(cart));
+
+//11. Створи функцію countKeys, яка приймає об'єкт і повертає кількість його ключів.
+
+const user = {
+    name: 'John',
+    age: 25,
+    isAdmin: true
+};
+
+function countKeys(obj) {
+    const keys = Object.keys(obj);
+    return keys.length;
+}
+
+// console.log(countKeys(user));
+
+//12. Створи функцію updateValue, яка приймає об'єкт, ключ, і нове значення. Якщо ключ існує, оновлює значення. Якщо ні, додає нову пару ключ-значення.
+
+const setting = {
+    theme: 'dark',
+    language: 'en'
+};
+
+function updateValue(obj, key, value) {
+    if (!obj.hasOwnProperty(key)) {
+        obj[key] = value;
+    }
+}
+
+updateValue(setting, 'language', 'uk');
+updateValue(setting, 'fontSize', 14);
+console.log(setting);
+// { theme: 'dark', language: 'uk', fontSize: 14 }
