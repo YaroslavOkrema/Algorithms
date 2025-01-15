@@ -149,5 +149,19 @@ function updateValue(obj, key, value) {
 
 updateValue(setting, 'language', 'uk');
 updateValue(setting, 'fontSize', 14);
-console.log(setting);
+// console.log(setting);
 // { theme: 'dark', language: 'uk', fontSize: 14 }
+
+//13. Створи функцію findObjectByValue, яка приймає масив об'єктів і значення, і повертає перший об'єкт, що містить це значення.
+
+const users2 = [
+    { id: 1, name: 'Alice' },
+    { id: 2, name: 'Bob' },
+    { id: 3, name: 'Charlie' }
+];
+
+function findObjectByValue(arr, value) {
+    return arr.find(obj => Object.values(obj).includes(value));
+}
+
+console.log(findObjectByValue(users2, 'Bob')); // { id: 2, name: 'Bob' }
