@@ -392,3 +392,30 @@ function shortWordInRow(str) {
 }
 
 console.log(shortWordInRow('The quick brown fox jumps over the lazy as dog'));
+
+// Anagram
+
+function isAnagram(str1, str2) {
+    const firstStr = str1.toLowerCase().split('').sort().join('');
+    const secondStr = str2.toLowerCase().split('').sort().join('');
+
+    return firstStr === secondStr;
+}
+console.log(isAnagram("listen", "silent")); // true
+console.log(isAnagram("hello", "world"));  // false
+
+
+// Напиши функцію uniqueValues(arr), яка приймає масив і повертає новий масив з унікальними значеннями.
+function uniqueValues(arr) {
+    return [...new Set(arr)];
+}
+
+console.log(uniqueValues([1, 2, 2, 3, 4, 4, 5]));
+
+function uniqueValues2(arr) {
+    return arr.filter(function(value, index) {
+        return arr.indexOf(value) === index;
+    })
+}
+
+console.log(uniqueValues2([1, 2, 2, 3, 4, 4, 5]));
