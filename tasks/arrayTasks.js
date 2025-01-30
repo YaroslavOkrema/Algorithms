@@ -419,3 +419,34 @@ function uniqueValues2(arr) {
 }
 
 console.log(uniqueValues2([1, 2, 2, 3, 4, 4, 5]));
+
+//Напиши функцію findMax(arr), яка повертає найбільше число у масиві.
+function findMax(arr) {
+    let maxNumber = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (maxNumber < arr[i]) {
+            maxNumber = arr[i]
+        }
+    }
+
+    return maxNumber;
+}
+
+console.log(findMax([1, 2, 3, 4, 5, 20, 30, 12, 13, 23]));
+
+function findMax2(arr) {
+    return Math.max(...arr)
+}
+
+console.log(findMax2([1, 2, 3, 4, 5, 20, 30, 12, 13, 23]));
+
+//Напишіть функцію, яка об'єднує два масиви та прибирає дублікати.
+function mergeUniqueArrays(arr1, arr2) {
+    const firstArr = [...new Set(arr1)];
+    const secondArr = [...new Set(arr2)];
+
+    return [...firstArr, ...secondArr];
+}
+
+console.log(mergeUniqueArrays([1,1,1,2,2,3,3,4,5], [6,6,7,7,8,9]))
