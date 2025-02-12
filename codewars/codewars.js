@@ -107,3 +107,27 @@ function arrMadness2(a, b) {
 
 console.log(arrayMadness([5,6,7],[4,5,6]));
 console.log(arrMadness2([5,6,7],[4,5,6]));
+
+/////////////////////////////////////////////////////////////////////////////
+// Зі списку чисел потрібно вибрати лише непарні й повернути їх у новому списку.
+function odds(values){
+    return values.filter(numbers => numbers % 2 === 1);
+}
+
+//////////////////////////////////////////////////////////////////////////////
+// Повернути кількість позитивних непарних чисел, які менші за n.
+function oddCount(n){
+    let res = [];
+
+    for (let i = 0; i < n; i++) {
+        if (i % 2 === 1) {
+            res.push(i);
+        }
+    }
+
+    return res.length;
+}
+
+function oddCount2(n){
+    return Math.floor(n / 2);
+}
