@@ -131,3 +131,9 @@ function oddCount(n){
 function oddCount2(n){
     return Math.floor(n / 2);
 }
+
+/////////////////////////////////////////////////////////////
+//Ви отримуєте масив чисел, поверніть суму всіх додатних чисел.
+function positiveSum(arr) {
+    return arr.filter(num => num > 0).reduce((a, b) => a + b, 0);
+}
