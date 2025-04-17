@@ -7,6 +7,11 @@ const students = [
 
 function groupByGender(students) {
     return students.reduce((acc, item) => {
+        if (!acc[item.gender]) {
+            acc[item.gender] = [];
+        }
+        acc[item.gender].push(item);
+        return acc;
     }, {})
 }
 
