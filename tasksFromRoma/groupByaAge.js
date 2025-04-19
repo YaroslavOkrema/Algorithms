@@ -7,11 +7,8 @@ const students = [
 
 function groupByAge(students) {
     return students.reduce((acc, item) => {
-        if (!acc[item.age]) {
-            acc[item.age] = []
-        }
-        acc[item.age].push(item)
-        return acc
+        acc[item] = (acc[item] || 0) + 1;
+        return acc;
     }, {})
 }
 
