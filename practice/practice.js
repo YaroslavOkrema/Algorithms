@@ -168,13 +168,75 @@ copyOfA.c = 'abc';
 // const person2 = {...person}
 // person2.name = "Bob";
 
-const person = {
-    name: "Alice",
-    age: 25,
+// const person = {
+//     name: "Alice",
+//     age: 25,
+// }
+//
+// const person2 = JSON.parse(JSON.stringify(person));
+// person2.name = "Bob";
+//
+// console.log(person);
+// console.log(person2)
+
+// const user = { name: "Alex", age: 25, city: "Kyiv" };
+//
+// console.log(Object.keys(user).length);
+//
+// const salaries = {
+//     John: 100,
+//     Ann: 160,
+//     Pete: 130,
+// };
+//
+// console.log(Object.values(salaries).reduce((a, b) => a + b, 0));
+//
+//
+//
+// function voidObject(obj) {
+//     return Object.keys(obj).length === 0;
+// }
+//
+// console.log(voidObject({}));
+//
+// const user2 = { name: "Masha", age: 20 };
+//
+// function hasAge(obj) {
+//     return Object.keys(obj).includes('age');
+// }
+//
+// console.log(hasAge(user2));
+
+// const product = { title: "Phone", price: 1000, color: "black" };
+//
+// function getValues(obj) {
+//     return Object.values(obj);
+// }
+//
+// console.log(getValues(product));
+
+// const car = { brand: "BMW" };
+//
+// function addYear(obj) {
+//     obj.year = 2020;
+//     return obj;
+// }
+//
+// console.log(addYear(car))
+
+// const person = { name: "Oleg", age: 30 };
+//
+// function removeAge(obj) {
+//     delete obj.age;
+//     return obj;
+// }
+//
+// console.log(removeAge(person));
+
+const user = { name: "Ira", city: "Kyiv" };
+
+function hasKyiv(obj) {
+    return Object.values(obj).includes('Kyiv');
 }
 
-const person2 = JSON.parse(JSON.stringify(person));
-person2.name = "Bob";
-
-console.log(person);
-console.log(person2)
+console.log(hasKyiv(user));
