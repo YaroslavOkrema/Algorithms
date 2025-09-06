@@ -126,12 +126,55 @@ copyOfA.c = 'abc';
 //
 // myCity.cityGreeting();
 
-const post = {
-    title: 'My post',
-    likesQty: 5
+// const post = {
+//     title: 'My post',
+//     likesQty: 5
+// }
+//
+// JSON.stringify(post);
+//
+// const postStringify = JSON.stringify(post);
+// JSON.parse(postStringify);
+
+// const person = {
+//     name: "Alice",
+//     age: 25,
+// }
+//
+// const person2 = person;
+//
+// person2.age = 26;
+// person2.isAdult = true;
+//
+// console.log(person.age);
+// console.log(person.isAdult);
+
+// const person = {
+//     name: "Alice",
+//     age: 25,
+// }
+//
+// const person2 = Object.assign({}, person);
+// person2.age = 26;
+//
+// console.log(person);
+// console.log(person2);
+
+// const person = {
+//     name: "Alice",
+//     age: 25,
+// }
+//
+// const person2 = {...person}
+// person2.name = "Bob";
+
+const person = {
+    name: "Alice",
+    age: 25,
 }
 
-JSON.stringify(post);
+const person2 = JSON.parse(JSON.stringify(person));
+person2.name = "Bob";
 
-const postStringify = JSON.stringify(post);
-JSON.parse(postStringify);
+console.log(person);
+console.log(person2)
