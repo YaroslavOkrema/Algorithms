@@ -233,10 +233,56 @@ copyOfA.c = 'abc';
 //
 // console.log(removeAge(person));
 
-const user = { name: "Ira", city: "Kyiv" };
+// const user = { name: "Ira", city: "Kyiv" };
+//
+// function hasKyiv(obj) {
+//     return Object.values(obj).includes('Kyiv');
+// }
+//
+// console.log(hasKyiv(user));
 
-function hasKyiv(obj) {
-    return Object.values(obj).includes('Kyiv');
+function sumOfPositive(arr) {
+    return arr.filter(num => num > 0).reduce((acc, num) => acc + num, 0);
 }
 
-console.log(hasKyiv(user));
+// console.log(sumOfPositive([1, -4, 7, 12]))
+
+function sumOfPositive2(arr) {
+    return arr.reduce((acc, num) => num > 0 ? acc + num : acc, 0);
+}
+
+// console.log(sumOfPositive2([1, -4, 7, 12]))
+
+function countOfPositiveSunOfNegative(arr) {
+    const countPositive = arr.reduce((acc, num) => num > 0 ? acc + 1 : acc, 0);
+    const sumOfNegative = arr.reduce((acc, num) => num < 0 ? acc + num : acc, 0);
+
+    return [countPositive, sumOfNegative];
+}
+
+console.log(countOfPositiveSunOfNegative([1, 2, 3, 4, -4, -5, 10]));
+
+function removeDuplicates(arr) {
+    return arr.filter((num, index) => arr.indexOf(num) === index)
+}
+
+// console.log(removeDuplicates([1, 2, 2, 3, 4, 4, 5]))
+
+function removeDuplicates2(arr) {
+    return [...new Set(arr)];
+}
+
+// console.log(removeDuplicates2([1, 2, 2, 3, 4, 4, 5]))
+
+function smallestIntInArray(arr) {
+    return Math.min(...arr);
+}
+
+// console.log(smallestIntInArray([34, 15, 88, 2]));
+
+function smallestIntInArray2(arr) {
+    const sortArr = arr.sort((a, b) => a - b);
+    return sortArr[0];
+}
+
+// console.log(smallestIntInArray2([34, 15, 88, 2]));
