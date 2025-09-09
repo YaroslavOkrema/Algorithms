@@ -32,4 +32,18 @@ function countOfPositiveSunOfNegative(arr) {
     return [countPositive, sumOfNegative];
 }
 
+console.log(countOfPositiveSunOfNegative([1, 2, 3, 4, -4, -5, 10]));
+
+function countOfPositiveSunOfNegative2(arr) {
+    return arr.reduce((acc, num) => {
+        if (num > 0) {
+            acc[0]++;
+        }
+        if (num < 0) {
+            acc[1] += num;
+        }
+        return acc;
+    }, [0, 0])
+}
+
 console.log(countOfPositiveSunOfNegative2([1, 2, 3, 4, -4, -5, 10]));
