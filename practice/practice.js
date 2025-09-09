@@ -287,3 +287,34 @@ function smallestIntInArray2(arr) {
 }
 
 // console.log(smallestIntInArray2([34, 15, 88, 2]));
+
+function reverseArr(arr) {
+    return arr.reverse();
+}
+
+// console.log(reverseArr([1, 2, 3, 4]));
+
+function convertStringToArray(str) {
+    return str.split(' ');
+}
+
+// console.log(convertStringToArray("Hello world"));
+
+function reverseString(str) {
+    return str.split('').reverse().join('');
+}
+
+// console.log(reverseString("hello"));
+
+function removeFirstAndLastCharacter(str) {
+    return str.slice(1, -1);
+}
+
+// console.log(removeFirstAndLastCharacter('Hello'))
+
+function capitalizeFirstLetter(str) {
+
+    return str[0].toUpperCase() + str.slice(1);
+}
+
+console.log(capitalizeFirstLetter('hello'))
