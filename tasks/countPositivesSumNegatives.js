@@ -24,3 +24,12 @@ function countPositivesSumNegatives(arr) {
     return [count, sum];
 }
 console.log(countPositivesSumNegatives([]));
+
+function countOfPositiveSunOfNegative(arr) {
+    const countPositive = arr.reduce((acc, num) => num > 0 ? acc + 1 : acc, 0);
+    const sumOfNegative = arr.reduce((acc, num) => num < 0 ? acc + num : acc, 0);
+
+    return [countPositive, sumOfNegative];
+}
+
+console.log(countOfPositiveSunOfNegative2([1, 2, 3, 4, -4, -5, 10]));
