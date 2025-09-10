@@ -317,4 +317,31 @@ function capitalizeFirstLetter(str) {
     return str[0].toUpperCase() + str.slice(1);
 }
 
-console.log(capitalizeFirstLetter('hello'))
+// console.log(capitalizeFirstLetter('hello'))
+
+function countKeys(obj) {
+    return Object.keys(obj).length;
+}
+
+// console.log(countKeys({ a: 1, b: 2, c: 3 }));
+
+let obj = { a: 1, b: 2 }
+
+function updateValue(obj, key, value) {
+    obj[key] = value;
+    return obj;
+}
+
+console.log(updateValue(obj, 'b', 5));
+
+function objValues(obj) {
+    return Object.values(obj)
+}
+
+// console.log(objValues({ name: "Yaro", age: 28 }))
+
+function hasKeys(obj, key) {
+    return Object.keys(obj).includes(key);
+}
+
+// console.log(hasKeys({ a: 1, b: 2 }, 'a'))
