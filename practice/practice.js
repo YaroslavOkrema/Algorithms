@@ -241,107 +241,187 @@ copyOfA.c = 'abc';
 //
 // console.log(hasKyiv(user));
 
-function sumOfPositive(arr) {
-    return arr.filter(num => num > 0).reduce((acc, num) => acc + num, 0);
-}
-
-// console.log(sumOfPositive([1, -4, 7, 12]))
-
-function sumOfPositive2(arr) {
-    return arr.reduce((acc, num) => num > 0 ? acc + num : acc, 0);
-}
+// function sumOfPositive(arr) {
+//     return arr.filter(num => num > 0).reduce((acc, num) => acc + num, 0);
+// }
+//
+// // console.log(sumOfPositive([1, -4, 7, 12]))
+//
+// function sumOfPositive2(arr) {
+//     return arr.reduce((acc, num) => num > 0 ? acc + num : acc, 0);
+// }
 
 // console.log(sumOfPositive2([1, -4, 7, 12]))
 
-function countOfPositiveSunOfNegative(arr) {
-    const countPositive = arr.reduce((acc, num) => num > 0 ? acc + 1 : acc, 0);
-    const sumOfNegative = arr.reduce((acc, num) => num < 0 ? acc + num : acc, 0);
 
-    return [countPositive, sumOfNegative];
+// function removeDuplicates(arr) {
+//     return arr.filter((num, index) => arr.indexOf(num) === index)
+// }
+//
+// // console.log(removeDuplicates([1, 2, 2, 3, 4, 4, 5]))
+//
+// function removeDuplicates2(arr) {
+//     return [...new Set(arr)];
+// }
+//
+// // console.log(removeDuplicates2([1, 2, 2, 3, 4, 4, 5]))
+//
+// function smallestIntInArray(arr) {
+//     return Math.min(...arr);
+// }
+//
+// // console.log(smallestIntInArray([34, 15, 88, 2]));
+//
+// function smallestIntInArray2(arr) {
+//     const sortArr = arr.sort((a, b) => a - b);
+//     return sortArr[0];
+// }
+//
+// // console.log(smallestIntInArray2([34, 15, 88, 2]));
+//
+// function reverseArr(arr) {
+//     return arr.reverse();
+// }
+//
+// // console.log(reverseArr([1, 2, 3, 4]));
+//
+// function convertStringToArray(str) {
+//     return str.split(' ');
+// }
+//
+// // console.log(convertStringToArray("Hello world"));
+//
+// function reverseString(str) {
+//     return str.split('').reverse().join('');
+// }
+//
+// // console.log(reverseString("hello"));
+//
+// function removeFirstAndLastCharacter(str) {
+//     return str.slice(1, -1);
+// }
+//
+// // console.log(removeFirstAndLastCharacter('Hello'))
+//
+// function capitalizeFirstLetter(str) {
+//
+//     return str[0].toUpperCase() + str.slice(1);
+// }
+//
+// // console.log(capitalizeFirstLetter('hello'))
+//
+// function countKeys(obj) {
+//     return Object.keys(obj).length;
+// }
+//
+// // console.log(countKeys({ a: 1, b: 2, c: 3 }));
+//
+// let obj = { a: 1, b: 2 }
+//
+// function updateValue(obj, key, value) {
+//     obj[key] = value;
+//     return obj;
+// }
+//
+// console.log(updateValue(obj, 'b', 5));
+//
+// function objValues(obj) {
+//     return Object.values(obj)
+// }
+//
+// // console.log(objValues({ name: "Yaro", age: 28 }))
+//
+// function hasKeys(obj, key) {
+//     return Object.keys(obj).includes(key);
+// }
+//
+// // console.log(hasKeys({ a: 1, b: 2 }, 'a'))
+
+function findMax(arr) {
+    let maxNum = 0;
+
+    arr.forEach(number => {
+        if (number > maxNum) maxNum = number;
+    });
+
+    return maxNum;
 }
 
-// console.log(countOfPositiveSunOfNegative([1, 2, 3, 4, -4, -5, 10]));
+//console.log(findMax([1, 5, 3, 7, 4, 10, 23, 12, 32]));
 
+function findMin(arr) {
+    let minNum = arr[0];
 
-function removeDuplicates(arr) {
-    return arr.filter((num, index) => arr.indexOf(num) === index)
+    arr.forEach(number => {
+        if (number < minNum) minNum = number;
+    })
+
+    return minNum;
 }
 
-// console.log(removeDuplicates([1, 2, 2, 3, 4, 4, 5]))
+//console.log(findMin([5, 3, 7, 4, 10, 23, 12, 32]));
 
-function removeDuplicates2(arr) {
-    return [...new Set(arr)];
+function sumArr(arr) {
+    //return arr.reduce((acc, num) => acc + num, 0);
+    let arrSum = 0;
+
+    arr.forEach(number => {
+        arrSum += number;
+    });
+
+    return arrSum;
 }
 
-// console.log(removeDuplicates2([1, 2, 2, 3, 4, 4, 5]))
+//console.log(sumArr([5, 3, 7, 4, 10, 23, 12, 32]));
 
-function smallestIntInArray(arr) {
-    return Math.min(...arr);
+function countEvenAndOdd(arr) {
+    let countEven = 0;
+    let countOdd = 0;
+
+    arr.forEach(number => {
+        if (number % 2 === 0) {
+            countEven++;
+        } else {
+            countOdd++;
+        }
+    });
+
+    return [countEven, countOdd]
 }
 
-// console.log(smallestIntInArray([34, 15, 88, 2]));
-
-function smallestIntInArray2(arr) {
-    const sortArr = arr.sort((a, b) => a - b);
-    return sortArr[0];
-}
-
-// console.log(smallestIntInArray2([34, 15, 88, 2]));
+//console.log(countEvenAndOdd([5, 3, 7, 4, 10, 23, 12, 32, 6, 8]));
 
 function reverseArr(arr) {
-    return arr.reverse();
+    //return arr.reverse()
+    let revArr = [];
+
+    for (let i = arr.lengt - 1; i >= 0; i--) {
+        revArr.push(arr[i]);
+    }
+
+    return revArr;
 }
 
-// console.log(reverseArr([1, 2, 3, 4]));
+//console.log(reverseArr([5, 3, 7, 4, 10, 23, 12, 32, 6, 8]));
 
-function convertStringToArray(str) {
-    return str.split(' ');
+function countOfPositiveSunOfNegative2(arr) {
+    // const countPositive = arr.reduce((acc, num) => num > 0 ? acc + 1 : acc, 0);
+    // const sumOfNegative = arr.reduce((acc, num) => num < 0 ? acc + num : acc, 0);
+    //
+    // return [countPositive, sumOfNegative];
+
+    let countPositive = 0;
+    let sumNegative = 0;
+
+    arr.forEach(number => {
+        if (number >= 0) {
+            countPositive++;
+        } else {
+            sumNegative += number;
+        }
+    });
+
+    return [countPositive, sumNegative];
 }
 
-// console.log(convertStringToArray("Hello world"));
-
-function reverseString(str) {
-    return str.split('').reverse().join('');
-}
-
-// console.log(reverseString("hello"));
-
-function removeFirstAndLastCharacter(str) {
-    return str.slice(1, -1);
-}
-
-// console.log(removeFirstAndLastCharacter('Hello'))
-
-function capitalizeFirstLetter(str) {
-
-    return str[0].toUpperCase() + str.slice(1);
-}
-
-// console.log(capitalizeFirstLetter('hello'))
-
-function countKeys(obj) {
-    return Object.keys(obj).length;
-}
-
-// console.log(countKeys({ a: 1, b: 2, c: 3 }));
-
-let obj = { a: 1, b: 2 }
-
-function updateValue(obj, key, value) {
-    obj[key] = value;
-    return obj;
-}
-
-console.log(updateValue(obj, 'b', 5));
-
-function objValues(obj) {
-    return Object.values(obj)
-}
-
-// console.log(objValues({ name: "Yaro", age: 28 }))
-
-function hasKeys(obj, key) {
-    return Object.keys(obj).includes(key);
-}
-
-// console.log(hasKeys({ a: 1, b: 2 }, 'a'))
+console.log(countOfPositiveSunOfNegative2([1, 2, 3, 4, -4, -5, 10]));
