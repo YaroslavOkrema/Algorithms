@@ -8,4 +8,4 @@ function findFirstDigitIndex(text) {
     return -1;
 }
 
-console.log(findFirstDigitIndex("asfsfdsfsd"));
+console.log(findFirstDigitIndex("a2dsada3f"));
